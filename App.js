@@ -36,7 +36,7 @@ const App = () => {
   return (
     // <SafeAreaView style={[styles.container]}>
     //   {/* <Text>Hello React Native</Text> */}
-    //   {/* <Image source={require('./assets/snoopy.jpg')} /> */}
+    //   {/* <Image source={require('./app/assets/snoopy.jpg')} /> */}
     //   {/* <TouchableHighlight onPress={() => console.log('Image tapped')}>
     //     <Image
     //       source={{
@@ -84,12 +84,7 @@ const App = () => {
         style={{
           backgroundColor: 'dodgerblue',
           // flex: 2,
-          // flexBasis: 100, // width or height (depending on the primary axis)
-          // flexGrow: 1, // same as setting the flex property
-          // width: 100,
-          // height: 100,
-          flexShrink: 1, // opposite of flexGrow
-          width: 400,
+          width: 100,
           height: 100,
         }}
       />
@@ -99,6 +94,13 @@ const App = () => {
           // flex: 1,
           width: 100,
           height: 100,
+          top: 20,
+          left: 20,
+          position: 'absolute',
+          /*
+            relative (default): positioning according to its current position without affecting the layout around it
+            absolute: positioning relative to its parent and the layout around will get affected
+          */
         }}
       />
       <View
