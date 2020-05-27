@@ -79,15 +79,18 @@ const App = () => {
         flexDirection: 'row',
         justifyContent: 'center', // align items along the primary axis (main)
         alignItems: 'center', // align items along the cross axis (secondary)
-        alignContent: 'center',
-        flexWrap: 'wrap',
       }}>
       <View
         style={{
           backgroundColor: 'dodgerblue',
           // flex: 2,
-          width: 100,
-          height: 300,
+          // flexBasis: 100, // width or height (depending on the primary axis)
+          // flexGrow: 1, // same as setting the flex property
+          // width: 100,
+          // height: 100,
+          flexShrink: 1, // opposite of flexGrow
+          width: 400,
+          height: 100,
         }}
       />
       <View
@@ -101,22 +104,6 @@ const App = () => {
       <View
         style={{
           backgroundColor: 'tomato',
-          // flex: 1,
-          width: 100,
-          height: 100,
-        }}
-      />
-      <View
-        style={{
-          backgroundColor: 'grey',
-          // flex: 1,
-          width: 100,
-          height: 100,
-        }}
-      />
-      <View
-        style={{
-          backgroundColor: 'greenyellow',
           // flex: 1,
           width: 100,
           height: 100,
