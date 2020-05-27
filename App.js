@@ -79,6 +79,8 @@ const App = () => {
         flexDirection: 'row',
         justifyContent: 'center', // align items along the primary axis (main)
         alignItems: 'center', // align items along the cross axis (secondary)
+        alignContent: 'center',
+        flexWrap: 'wrap',
       }}>
       <View
         style={{
@@ -86,7 +88,6 @@ const App = () => {
           // flex: 2,
           width: 100,
           height: 300,
-          alignSelf: 'flex-start',
         }}
       />
       <View
@@ -94,12 +95,28 @@ const App = () => {
           backgroundColor: 'gold',
           // flex: 1,
           width: 100,
-          height: 200,
+          height: 100,
         }}
       />
       <View
         style={{
           backgroundColor: 'tomato',
+          // flex: 1,
+          width: 100,
+          height: 100,
+        }}
+      />
+      <View
+        style={{
+          backgroundColor: 'grey',
+          // flex: 1,
+          width: 100,
+          height: 100,
+        }}
+      />
+      <View
+        style={{
+          backgroundColor: 'greenyellow',
           // flex: 1,
           width: 100,
           height: 100,
