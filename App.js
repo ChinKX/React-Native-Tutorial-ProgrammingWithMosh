@@ -21,99 +21,105 @@ import {
   Alert,
   Platform,
   StatusBar,
-  Dimensions,
+  Dimensions
 } from 'react-native';
 import {
   useDimensions,
-  useDeviceOrientation,
+  useDeviceOrientation
 } from '@react-native-community/hooks';
+import WelcomeScreen from './app/screens/WelcomeScreen';
+import ViewImageScreen from './app/screens/ViewImageScreen';
 
 const App = () => {
-  // console.log(useDimensions());
-  // console.log(useDeviceOrientation());
-  const {landscape} = useDeviceOrientation();
-
-  return (
-    // <SafeAreaView style={[styles.container]}>
-    //   {/* <Text>Hello React Native</Text> */}
-    //   {/* <Image source={require('./app/assets/snoopy.jpg')} /> */}
-    //   {/* <TouchableHighlight onPress={() => console.log('Image tapped')}>
-    //     <Image
-    //       source={{
-    //         uri: 'https://picsum.photos/200',
-    //         width: 200,
-    //         height: 200,
-    //       }}
-    //     />
-    //   </TouchableHighlight>
-    //   <TouchableNativeFeedback>
-    //     <View style={{width: 200, height: 70, backgroundColor: 'white'}} />
-    //   </TouchableNativeFeedback> */}
-    //   {/* <Button
-    //     title="Click Me"
-    //     onPress={() =>
-    //       Alert.alert('My title', 'My message', [
-    //         {
-    //           text: 'Yes',
-    //           onPress: () => console.log('Yes'),
-    //         },
-    //         {
-    //           text: 'No',
-    //           onPress: () => console.log('No'),
-    //         },
-    //       ])
-    //     }
-    //   /> */}
-    //   {/* <View
-    //     style={{
-    //       backgroundColor: '#fff',
-    //       width: '100%',
-    //       height: landscape ? '100%' : '30%',
-    //     }}
-    //   /> */}
-    // </SafeAreaView>
-    <View
-      style={{
-        backgroundColor: '#fff',
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'center', // align items along the primary axis (main)
-        alignItems: 'center', // align items along the cross axis (secondary)
-      }}>
-      <View
-        style={{
-          backgroundColor: 'dodgerblue',
-          // flex: 2,
-          width: 100,
-          height: 100,
-        }}
-      />
-      <View
-        style={{
-          backgroundColor: 'gold',
-          // flex: 1,
-          width: 100,
-          height: 100,
-          top: 20,
-          left: 20,
-          position: 'absolute',
-          /*
-            relative (default): positioning according to its current position without affecting the layout around it
-            absolute: positioning relative to its parent and the layout around will get affected
-          */
-        }}
-      />
-      <View
-        style={{
-          backgroundColor: 'tomato',
-          // flex: 1,
-          width: 100,
-          height: 100,
-        }}
-      />
-    </View>
-  );
+  return <ViewImageScreen />;
 };
+
+// const App = () => {
+//   // console.log(useDimensions());
+//   // console.log(useDeviceOrientation());
+//   const {landscape} = useDeviceOrientation();
+
+//   return (
+//     // <SafeAreaView style={[styles.container]}>
+//     //   {/* <Text>Hello React Native</Text> */}
+//     //   {/* <Image source={require('./app/assets/snoopy.jpg')} /> */}
+//     //   {/* <TouchableHighlight onPress={() => console.log('Image tapped')}>
+//     //     <Image
+//     //       source={{
+//     //         uri: 'https://picsum.photos/200',
+//     //         width: 200,
+//     //         height: 200,
+//     //       }}
+//     //     />
+//     //   </TouchableHighlight>
+//     //   <TouchableNativeFeedback>
+//     //     <View style={{width: 200, height: 70, backgroundColor: 'white'}} />
+//     //   </TouchableNativeFeedback> */}
+//     //   {/* <Button
+//     //     title="Click Me"
+//     //     onPress={() =>
+//     //       Alert.alert('My title', 'My message', [
+//     //         {
+//     //           text: 'Yes',
+//     //           onPress: () => console.log('Yes'),
+//     //         },
+//     //         {
+//     //           text: 'No',
+//     //           onPress: () => console.log('No'),
+//     //         },
+//     //       ])
+//     //     }
+//     //   /> */}
+//     //   {/* <View
+//     //     style={{
+//     //       backgroundColor: '#fff',
+//     //       width: '100%',
+//     //       height: landscape ? '100%' : '30%',
+//     //     }}
+//     //   /> */}
+//     // </SafeAreaView>
+//     <View
+//       style={{
+//         backgroundColor: '#fff',
+//         flex: 1,
+//         flexDirection: 'row',
+//         justifyContent: 'center', // align items along the primary axis (main)
+//         alignItems: 'center', // align items along the cross axis (secondary)
+//       }}>
+//       <View
+//         style={{
+//           backgroundColor: 'dodgerblue',
+//           // flex: 2,
+//           width: 100,
+//           height: 100,
+//         }}
+//       />
+//       <View
+//         style={{
+//           backgroundColor: 'gold',
+//           // flex: 1,
+//           width: 100,
+//           height: 100,
+//           top: 20,
+//           left: 20,
+//           position: 'absolute',
+//           /*
+//             relative (default): positioning according to its current position without affecting the layout around it
+//             absolute: positioning relative to its parent and the layout around will get affected
+//           */
+//         }}
+//       />
+//       <View
+//         style={{
+//           backgroundColor: 'tomato',
+//           // flex: 1,
+//           width: 100,
+//           height: 100,
+//         }}
+//       />
+//     </View>
+//   );
+// };
 
 /*
   Purposes of using Stylesheet.create
@@ -124,10 +130,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'dodgerblue',
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
     // justifyContent: 'center',
     // alignItems: 'center',
-  },
+  }
 });
 
 export default App;
